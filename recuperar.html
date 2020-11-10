@@ -54,7 +54,7 @@ fetch('https://proyecto201902185.herokuapp.com//Contraseña',{
     if(response.message =="Falied"){
         alert("La contraseña o el usuario estan erroneos")
     }else{
-        alert(`Contraseña: ${response.pass}`)
+        alert(`Contraseña: ${response.password}`)
         sessionStorage.setItem("usuario", username)
 
     }
