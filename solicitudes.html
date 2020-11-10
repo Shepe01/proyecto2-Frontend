@@ -68,7 +68,7 @@
           function MostrarCanciones(){
             var contenido1 = document.querySelector('#CuerpoCanciones') 
             contenido1.innerHTML = ""
-            fetch('http://localhost:3000/Solicitud')
+            fetch('https://proyecto201902185.herokuapp.com//Solicitud')
             .then(response => response.json())
             .catch(error => {
             console.log(error)

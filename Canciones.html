@@ -116,7 +116,7 @@
                 'youtube': youtube       
              }
             console.log(objeto)
-            fetch('http://localhost:3000/Cancion', {
+            fetch('https://proyecto201902185.herokuapp.com//Cancion', {
             method: 'POST',
             body: JSON.stringify(objeto),
             headers:{
@@ -142,7 +142,7 @@
         function MostrarCanciones(){
             var contenido = document.querySelector('#CuerpoCanciones') 
             contenido.innerHTML = ""
-            fetch('http://localhost:3000/Cancion')
+            fetch('https://proyecto201902185.herokuapp.com//Cancion')
             .then(response => response.json())
             .catch(error => {
             console.log(error)
