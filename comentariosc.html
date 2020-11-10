@@ -1,0 +1,74 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="estilo1.css" rel="stylesheet">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<body>
+
+<div class="container-fluid header">
+   <header>
+  Comentarios
+ </header>
+</div>  
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+   </button>
+ 
+   <div class="collapse navbar-collapse" id="navbarColor01">
+     <ul class="navbar-nav mr-auto col-sm-3 col-md-3">
+       <li class="nav-item ">
+         <a onclick="Principal()"class="nav-link" href="#">Pagina_Principal <span class="sr-only">(current)</span></a>
+       </li>
+       <li class="nav-item">
+         <a onclick="MiPerfil()"  class="nav-link" href="#">solicitudes</a>
+       </li>
+       <li class="nav-item active">
+         <a class="nav-link" href="#">Comentarios</a>
+       </li>
+       <li class="nav-item">
+        <a onclick="Canciones()" class="nav-link" href="#">Canciones</a>
+      </li>
+    </li>
+     </ul>
+     <form class="form-inline my-2 my-lg-0">
+       <button onclick="Salir()" class="btn btn-secondary my-2 my-sm-0" type="button" data-toggle="modal" data-target="#loginModal">Salir</button>
+     </form>
+   </div>
+</nav>
+
+<div class="sidenav">
+   <div class="login-main-text">
+      <h2>Cliente</h2>
+   </div>
+</div>
+<div class="main">
+   <div class="col-md-6 col-sm-12">
+      <div class="login-form">
+         <form>
+           
+         </form>
+      </div>
+   </div>
+
+</div>
+<script>
+    function MiPerfil(){
+      location.href = "soliclientes.html"
+    }
+    </script>
+  
+  
+  <script>
+    function Canciones(){
+      location.href = "Cancionesc.html"
+    }
+    </script>
+    
+  <script>
+    function Principal(){
+      location.href = "cliente.html"
+    }
+    </script>
+</body>

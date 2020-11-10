@@ -1,0 +1,102 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
+
+
+.main-head{
+    height: 150px;
+    background: #FFF;
+   
+}
+
+.sidenav {
+    height: 100%;
+     background-color: #000;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+
+.main {
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+}
+
+@media screen and (max-width: 450px) {
+    .login-form{
+        margin-top: 10%;
+    }
+
+    .register-form{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .main{
+        margin-left: 40%; 
+    }
+
+    .sidenav{
+        width: 16%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 1150;
+    }
+
+    
+
+    .login-form{
+        margin-top: 80%;
+    }
+
+    .register-form{
+        margin-top: 20%;
+    }
+}
+
+
+.login-main-text{
+    margin-top: 50%;
+    padding: 10px;
+    color: #fff;
+}
+
+
+.btn-black{
+    background-color: #000 !important;
+    color: #fff;
+}
+.header{
+	background-color: #000;
+	color:#fff;
+	padding: 0%;
+	text-align: center;
+}
+
+header{
+	font-size: -webkit-xxx-large;
+}
+
+footer{
+	background-color: #333;
+	height: 10vh;
+	color:#fff;
+	padding: 0;
+	text-align: center;
+	position: absolute;
+    bottom: 0;
+    width: 85%;
+    height: 150px;
+    line-height: 60px;
+}
+
+
+.bg-primary {
+    background-color: #051e3a!important;
+}

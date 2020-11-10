@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="Inicio.css"> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<body>
+
+<div class="sidenav">
+         <div class="login-main-text">
+            <h2>Recuperar Contraseña<br></h2>
+            <p>Ingresa Tu Usuario Para Recuperarla </p>
+         </div>
+      </div>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+               <form>
+                  <div class="form-group">
+                     <label>User Name</label>
+                     <input id= "usuario" type="text" class="form-control" placeholder="User Name">
+                  </div>
+                  <button onclick="Recuperar()" type="button" class="btn btn-black">Recuperar</button>
+                  <button onclick="Iniciar()" type="button" class="btn btn-secondary">Iniciar Sesion</button>
+                  <button onclick="Regresar()" type="button" class="btn btn-secondary">Regresar</button>
+               </form>
+            </div>
+         </div>
+      </div>
+
+      <script>
+        function Recuperar(){
+        var username = document.querySelector('#usuario').value
+        var objeto = {
+            'usuario': username,
+        }
+        console.log(objeto)
+
+fetch('http://localhost:3000/Contraseña',{
+    method:'POST',
+    body:JSON.stringify(objeto),
+    headers:{
+        'Content-Type': 'application/json'
+    }
+}).then(res => res.json())
+.catch(err => {
+    console.error('Error:' , err)
+    alert("Ocurrio un error, ver la consola")
+})
+.then(response =>{
+    console.log(response)
+    console.log(response.message)
+    if(response.message =="Falied"){
+        alert("La contraseña o el usuario estan erroneos")
+    }else{
+        alert(`Contraseña: ${response.pass}`)
+        sessionStorage.setItem("usuario", username)
+
+    }
+})
+}
+function Regresar(){
+location.href = "Inicio.html"
+
+function Iniciar(){
+    location.href = "Inicio.html"
+}   
+
+}
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
